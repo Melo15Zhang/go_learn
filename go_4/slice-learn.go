@@ -40,6 +40,24 @@ func main() {
 	printSlice(arr5[0:3])
 	printSlice(arr5[1:])
 	printSlice(arr5[:])
+
+	var s []int
+	fmt.Println(s, len(s), cap(s))
+	if s == nil {
+		fmt.Println("nil!")
+	}
+
+	a := make([]int, 5)
+	printSlice(a)
+
+	b := make([]int, 0, 5)
+	printSlice(b)
+
+	c := b[:2]
+	printSlice(c)
+
+	d := c[2:5]
+	printSlice(d)
 }
 
 func printSlice(s []int) {
